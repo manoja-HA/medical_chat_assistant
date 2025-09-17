@@ -36,12 +36,11 @@ ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install minimal runtime dependencies
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates curl && \
     rm -rf /var/lib/apt/lists/*
 
-# Copy Python packages from builder stage
 COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
