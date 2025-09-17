@@ -1,0 +1,20 @@
+.git
+.gitignore
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.DS_Store
+
+# Local data and logs (mounted at runtime)
+logs/
+data/
+
+# Not needed for container image
+notebooks/
+tests/
+.env
+.env.*
+.monitoring/
